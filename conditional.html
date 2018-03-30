@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+ 	var age = 18; 
+	var login = 'admin123';
+	var userAge = prompt('Введите возраст','');
+	if(userAge == null){
+		document.write('<h1>Вы вышли из программы</h1>');
+			}
+
+	else if ( !(isNaN(userAge))) {
+
+		if (userAge < age) {
+		document.write('<h1>Вы несовершеннолетний!</h1>');
+		document.write('<p1>Вход запрещен</p1>');
+
+		}
+		else{
+		var userLogin = prompt('Введите имя','');
+			if (userLogin == login) {
+			var userPassword = prompt('Введите пароль','');
+			var password = 'qwerty123';
+				if (userPassword == password ) {
+				document.write('<h1>Привет, admin!</h1>');
+				}else{
+				document.write('<h1>Неверный пароль!</h1>');
+				}
+			} else if(userLogin == null){
+			document.write('<h1>Вы вышли из программы</h1>');
+			}
+			else{
+			document.write('Привет ' + userLogin);
+			}
+		}
+	} 
+	
+	else{
+	document.write('<h1>Вы ввели не число!</h1>');
+	}
+	</script>
+</body>
+</html>
